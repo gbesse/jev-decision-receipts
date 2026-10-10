@@ -1,0 +1,17 @@
+{
+  "name": "jev-decision-receipts",
+  "version": "0.1.0",
+  "description": "Portable, tamper-evident decision receipts for humans and agents",
+  "type": "module",
+  "bin": { "jev-receipt": "./src/cli.js" },
+  "exports": "./src/index.js",
+  "scripts": {
+    "test": "node --test",
+    "check": "node --check src/*.js && node --test && node src/cli.js validate examples/launch-window.jevreceipt.json",
+    "build:docs": "node scripts/build-docs.js"
+  },
+  "engines": { "node": ">=22" },
+  "keywords": ["decision", "provenance", "agents", "audit", "receipts"],
+  "license": "MIT",
+  "repository": { "type": "git", "url": "https://github.com/gbesse/jev-decision-receipts.git" }
+}

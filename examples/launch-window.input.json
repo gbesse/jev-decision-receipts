@@ -1,0 +1,28 @@
+{
+  "createdAt": "2026-10-10T09:00:00.000Z",
+  "subject": "Choose the launch window",
+  "revision": "plan@7f35c2a",
+  "producer": { "name": "jev-decision-receipts", "version": "0.1.0", "url": "https://github.com/gbesse/jev-decision-receipts" },
+  "candidates": [
+    { "id": "tuesday", "label": "Tuesday 10:00 UTC" },
+    { "id": "thursday", "label": "Thursday 15:00 UTC" },
+    { "id": "next_week", "label": "Next week" }
+  ],
+  "criteria": [
+    { "id": "readiness", "label": "Release readiness", "weight": 5 },
+    { "id": "reach", "label": "Audience reach", "weight": 3 },
+    { "id": "risk", "label": "Operational risk", "weight": 4, "direction": "minimize" }
+  ],
+  "evaluations": [
+    { "candidateId": "tuesday", "criterionId": "readiness", "score": 88, "evidence": [{ "ref": "ci://release/1842", "digest": "sha256:2f8e" }] },
+    { "candidateId": "tuesday", "criterionId": "reach", "score": 76, "evidence": [{ "ref": "analytics://audience/2026-w41" }] },
+    { "candidateId": "tuesday", "criterionId": "risk", "score": 24, "evidence": [{ "ref": "runbook://launch/v3" }] },
+    { "candidateId": "thursday", "criterionId": "readiness", "score": 92, "evidence": [{ "ref": "ci://release/1842" }] },
+    { "candidateId": "thursday", "criterionId": "reach", "score": 61, "evidence": [{ "ref": "analytics://audience/2026-w41" }] },
+    { "candidateId": "thursday", "criterionId": "risk", "score": 18, "evidence": [{ "ref": "runbook://launch/v3" }] },
+    { "candidateId": "next_week", "criterionId": "readiness", "score": 96, "evidence": [{ "ref": "roadmap://sprint/42" }] },
+    { "candidateId": "next_week", "criterionId": "reach", "score": 44, "evidence": [{ "ref": "analytics://audience/2026-w42" }] },
+    { "candidateId": "next_week", "criterionId": "risk", "score": 10, "evidence": [{ "ref": "runbook://launch/v3" }] }
+  ],
+  "provenance": { "method": "weighted-sum", "generatedBy": "software" }
+}

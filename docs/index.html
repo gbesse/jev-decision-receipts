@@ -1,0 +1,169 @@
+<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width"><title>Choose the launch window — Jev Receipt</title><style>body{margin:0;background:#060b13;color:#edf5ff;font:16px system-ui;display:grid;place-items:center;min-height:100vh}.wrap{width:min(1100px,92vw)}svg{width:100%;height:auto;border-radius:22px;box-shadow:0 24px 80px #0008}pre{background:#0e1828;padding:20px;border-radius:14px;overflow:auto;color:#a9bbd6}.ok{color:#8dffcf}.bad{color:#ff9d9d}</style><main class="wrap"><svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630"><defs><linearGradient id="g" x1="0" x2="1"><stop stop-color="#08111f"/><stop offset="1" stop-color="#152747"/></linearGradient></defs><rect width="1200" height="630" fill="url(#g)"/><circle cx="1080" cy="90" r="180" fill="#8dffcf" opacity=".08"/><text x="80" y="82" fill="#8dffcf" font-family="ui-monospace,monospace" font-size="23" letter-spacing="4">JEV DECISION RECEIPT</text><text x="80" y="145" fill="white" font-family="system-ui,sans-serif" font-weight="700" font-size="40">Choose the launch window</text><text x="80" y="202" fill="#9eb2d2" font-family="system-ui,sans-serif" font-size="25">Verdict: ABSTAINED</text><g font-family="system-ui,sans-serif"><text x="80" y="260" fill="#dce7ff" font-size="24">Next week</text><rect x="350" y="240" width="502.2" height="22" rx="11" fill="#8dffcf"/><text x="1000" y="260" text-anchor="end" fill="#dce7ff" font-size="22">81.0</text><text x="80" y="318" fill="#dce7ff" font-size="24">Tuesday 10:00 UTC</text><rect x="350" y="298" width="502.2" height="22" rx="11" fill="#6681a8"/><text x="1000" y="318" text-anchor="end" fill="#dce7ff" font-size="22">81.0</text><text x="80" y="376" fill="#dce7ff" font-size="24">Thursday 15:00 UTC</text><rect x="350" y="356" width="501.68354000000005" height="22" rx="11" fill="#6681a8"/><text x="1000" y="376" text-anchor="end" fill="#dce7ff" font-size="22">80.9</text></g><line x1="80" y1="532" x2="1120" y2="532" stroke="#354969"/><text x="80" y="578" fill="#91a6c5" font-family="ui-monospace,monospace" font-size="18">jvr_38ba9c5d6dd265f8ffd0 · SHA-256 VERIFIED</text><text x="1120" y="578" text-anchor="end" fill="#8dffcf" font-family="system-ui,sans-serif" font-size="20">jev.dev/receipts</text></svg><p class="ok">✓ Integrity verified</p><details><summary>Portable receipt JSON</summary><pre>{
+  &quot;$schema&quot;: &quot;https://jev.dev/schemas/decision-receipt/v1&quot;,
+  &quot;version&quot;: &quot;1.0.0&quot;,
+  &quot;createdAt&quot;: &quot;2026-10-10T09:00:00.000Z&quot;,
+  &quot;subject&quot;: &quot;Choose the launch window&quot;,
+  &quot;revision&quot;: &quot;plan@7f35c2a&quot;,
+  &quot;producer&quot;: {
+    &quot;name&quot;: &quot;jev-decision-receipts&quot;,
+    &quot;version&quot;: &quot;0.1.0&quot;,
+    &quot;url&quot;: &quot;https://github.com/gbesse/jev-decision-receipts&quot;
+  },
+  &quot;candidates&quot;: [
+    {
+      &quot;id&quot;: &quot;tuesday&quot;,
+      &quot;label&quot;: &quot;Tuesday 10:00 UTC&quot;
+    },
+    {
+      &quot;id&quot;: &quot;thursday&quot;,
+      &quot;label&quot;: &quot;Thursday 15:00 UTC&quot;
+    },
+    {
+      &quot;id&quot;: &quot;next_week&quot;,
+      &quot;label&quot;: &quot;Next week&quot;
+    }
+  ],
+  &quot;criteria&quot;: [
+    {
+      &quot;id&quot;: &quot;readiness&quot;,
+      &quot;label&quot;: &quot;Release readiness&quot;,
+      &quot;weight&quot;: 5
+    },
+    {
+      &quot;id&quot;: &quot;reach&quot;,
+      &quot;label&quot;: &quot;Audience reach&quot;,
+      &quot;weight&quot;: 3
+    },
+    {
+      &quot;id&quot;: &quot;risk&quot;,
+      &quot;label&quot;: &quot;Operational risk&quot;,
+      &quot;weight&quot;: 4,
+      &quot;direction&quot;: &quot;minimize&quot;
+    }
+  ],
+  &quot;evaluations&quot;: [
+    {
+      &quot;candidateId&quot;: &quot;tuesday&quot;,
+      &quot;criterionId&quot;: &quot;readiness&quot;,
+      &quot;score&quot;: 88,
+      &quot;evidence&quot;: [
+        {
+          &quot;ref&quot;: &quot;ci://release/1842&quot;,
+          &quot;digest&quot;: &quot;sha256:2f8e&quot;
+        }
+      ]
+    },
+    {
+      &quot;candidateId&quot;: &quot;tuesday&quot;,
+      &quot;criterionId&quot;: &quot;reach&quot;,
+      &quot;score&quot;: 76,
+      &quot;evidence&quot;: [
+        {
+          &quot;ref&quot;: &quot;analytics://audience/2026-w41&quot;
+        }
+      ]
+    },
+    {
+      &quot;candidateId&quot;: &quot;tuesday&quot;,
+      &quot;criterionId&quot;: &quot;risk&quot;,
+      &quot;score&quot;: 24,
+      &quot;evidence&quot;: [
+        {
+          &quot;ref&quot;: &quot;runbook://launch/v3&quot;
+        }
+      ]
+    },
+    {
+      &quot;candidateId&quot;: &quot;thursday&quot;,
+      &quot;criterionId&quot;: &quot;readiness&quot;,
+      &quot;score&quot;: 92,
+      &quot;evidence&quot;: [
+        {
+          &quot;ref&quot;: &quot;ci://release/1842&quot;
+        }
+      ]
+    },
+    {
+      &quot;candidateId&quot;: &quot;thursday&quot;,
+      &quot;criterionId&quot;: &quot;reach&quot;,
+      &quot;score&quot;: 61,
+      &quot;evidence&quot;: [
+        {
+          &quot;ref&quot;: &quot;analytics://audience/2026-w41&quot;
+        }
+      ]
+    },
+    {
+      &quot;candidateId&quot;: &quot;thursday&quot;,
+      &quot;criterionId&quot;: &quot;risk&quot;,
+      &quot;score&quot;: 18,
+      &quot;evidence&quot;: [
+        {
+          &quot;ref&quot;: &quot;runbook://launch/v3&quot;
+        }
+      ]
+    },
+    {
+      &quot;candidateId&quot;: &quot;next_week&quot;,
+      &quot;criterionId&quot;: &quot;readiness&quot;,
+      &quot;score&quot;: 96,
+      &quot;evidence&quot;: [
+        {
+          &quot;ref&quot;: &quot;roadmap://sprint/42&quot;
+        }
+      ]
+    },
+    {
+      &quot;candidateId&quot;: &quot;next_week&quot;,
+      &quot;criterionId&quot;: &quot;reach&quot;,
+      &quot;score&quot;: 44,
+      &quot;evidence&quot;: [
+        {
+          &quot;ref&quot;: &quot;analytics://audience/2026-w42&quot;
+        }
+      ]
+    },
+    {
+      &quot;candidateId&quot;: &quot;next_week&quot;,
+      &quot;criterionId&quot;: &quot;risk&quot;,
+      &quot;score&quot;: 10,
+      &quot;evidence&quot;: [
+        {
+          &quot;ref&quot;: &quot;runbook://launch/v3&quot;
+        }
+      ]
+    }
+  ],
+  &quot;verdict&quot;: {
+    &quot;status&quot;: &quot;abstained&quot;,
+    &quot;ranking&quot;: [
+      {
+        &quot;candidateId&quot;: &quot;next_week&quot;,
+        &quot;score&quot;: 81,
+        &quot;coverage&quot;: 1
+      },
+      {
+        &quot;candidateId&quot;: &quot;tuesday&quot;,
+        &quot;score&quot;: 81,
+        &quot;coverage&quot;: 1
+      },
+      {
+        &quot;candidateId&quot;: &quot;thursday&quot;,
+        &quot;score&quot;: 80.9167,
+        &quot;coverage&quot;: 1
+      }
+    ],
+    &quot;reasons&quot;: [
+      &quot;margin 0.0000 is below 0.03&quot;
+    ]
+  },
+  &quot;provenance&quot;: {
+    &quot;method&quot;: &quot;weighted-sum&quot;,
+    &quot;generatedBy&quot;: &quot;software&quot;
+  },
+  &quot;id&quot;: &quot;jvr_38ba9c5d6dd265f8ffd0&quot;,
+  &quot;integrity&quot;: {
+    &quot;algorithm&quot;: &quot;sha256&quot;,
+    &quot;digest&quot;: &quot;38ba9c5d6dd265f8ffd05927c6c72a5c8afbaddec509fb12c3b3f5248799cc0c&quot;
+  }
+}</pre></details></main></html>
